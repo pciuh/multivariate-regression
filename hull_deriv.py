@@ -105,7 +105,7 @@ def predpoly_(X,Y,Xo,dop,flag):
 
     return(pd.Series(pred.T[0]),pd.Series(prod.T[0]),coef,sco,polf)
 
-iDir = 'input/'
+iDir,pDir = 'input/', 'plots/'
 
 SEED = 12321
 
@@ -192,7 +192,7 @@ for mn in m_name:
     axy.clabel(cy,cy.levels,inline=True,fmt='%3.2f')
     axn.clabel(cn,cn.levels,inline=True,fmt='%3.2f')
 
-    fig.savefig('hf-'+mn+'.png',dpi=300,bbox_inches='tight')
+    fig.savefig(pDir + 'hf-'+mn+'.png',dpi=300,bbox_inches='tight')
 
 #Xx = np.array([v**2,v*r,r**2,v**3]).T
 #Xy = np.array([v,r,v**3,v**2*r,v*r**2,r**3]).T
